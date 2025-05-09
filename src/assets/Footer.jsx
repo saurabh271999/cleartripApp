@@ -13,8 +13,8 @@ export default function Footer() {
               className="w-16 md:w-20"
             />
             <div>
-              <div className="footer-logo-text text-xl font-bold">cleartrip</div>
-              <div className="footer-subtext text-sm">A Flipkart Company</div>
+              <div className="footer-logo-text text-xl font-bold">Amazingtrip</div>
+              <div className="footer-subtext text-sm">A  Company</div>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
         {/* Legal Section */}
         <div className="footer-legal text-sm text-gray-400 mt-8">
           <p>
-            © 2025 Cleartrip Pvt. Ltd. · <a href="#" className="hover:text-white">Privacy</a> · <a href="#" className="hover:text-white">Security</a> · <a href="#" className="hover:text-white">Terms of Use</a> · <a href="#" className="hover:text-white">Grievance Redressal</a>
+            © 2025 Saurabh · <a href="#" className="hover:text-white">Privacy</a> · <a href="#" className="hover:text-white">Security</a> · <a href="#" className="hover:text-white">Terms of Use</a> · <a href="#" className="hover:text-white">Grievance Redressal</a>
           </p>
         </div>
       </div>

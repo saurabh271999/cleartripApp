@@ -15,11 +15,11 @@ const Navbar = () => {
       <NavLink to="/">
   <div className="flex items-center">
     <span className="text-orange-500 text-3xl mr-2">✔️</span>
-    <span className="text-orange-500 font-bold text-2xl">cleartrip</span>
+    <span className="text-orange-500 font-bold text-2xl">Amazingtrip</span>
   </div>
 </NavLink>
         <span className="hidden sm:inline text-sm text-gray-400 italic ml-2">
-          | A <span className="font-semibold">Flipkart</span> Company
+          |  <span className="font-semibold">tanu and Team</span> 
         </span>
       </div>
 
@@ -41,10 +41,10 @@ const Navbar = () => {
 
       {/* Right: Nav links */}
       <div className="hidden sm:flex items-center space-x-8">
-      <NavLink to="/booking">
+      <NavLink className="" to="/booking">
       
       
-          <span className="mr-1">⭑</span> Offers
+          <span className="mr-1 hover:text-orange-500">⭑Offers</span> 
               </NavLink>
       
         <a href="#" className="flex items-center text-orange-900 hover:text-orange-500 text-base">

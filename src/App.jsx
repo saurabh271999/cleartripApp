@@ -10,6 +10,11 @@ import Payment from './assets/Payment'
 import Booking from './assets/Booking';
 import Layout from './assets/Layout';
 import Information from './assets/Information'
+import Searchflight from './assets/Searchflight';
+import Searchbus from './assets/Searchbus'
+
+import Paymenthotel from './assets/Paymenthotel'
+import Searchhotel from './assets/Searchhotel'
 
 // import Loginpop from './assets/Loginpop'
 
@@ -32,10 +37,16 @@ import Information from './assets/Information'
                 <Footer />
               </>
             } />
+            <Route element={<Layout/>}>
             <Route path="/booking" element={<Booking />} />
             <Route path="/payment" element={<Payment />} />
-            <Route path="/layout" element={<Layout />} />
-            
+    
+            <Route  path="/payment/searchflight" element={<Searchflight />} />
+            <Route  path="/payment/searchflight" element={<Searchflight />} />
+           
+            <Route  path="/booking/hotel/paymenthotel" element={<Paymenthotel />} />
+            <Route  path="/booking/hotel/searchhotel" element={<Searchhotel />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       );

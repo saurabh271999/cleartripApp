@@ -13,9 +13,9 @@ export default function FirstFlightOffer() {
 
       {/* Content */}
       <div className="bg-white w-full max-w-3xl rounded-3xl shadow-lg p-6 md:p-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-orange-600 mb-4">First Flight Offer</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-orange-600 mb-4">First Hotel Booking Offer</h1>
         <p className="text-lg text-gray-700 mb-6">
-          Flat 10% Off On Your First Domestic Flight Booking
+          Flat 10% Off On Your First Hotel booking
         </p>
 
         {/* Coupon Box */}
@@ -44,7 +44,7 @@ export default function FirstFlightOffer() {
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 shadow">
             <h3 className="text-xl font-semibold text-orange-400 mb-2">What do you get?</h3>
             <p className="text-gray-700">
-              Flat 10% off up to ₹1,000 on Domestic Flight bookings
+              Flat 10% off up to ₹1,000 on Hotel booking
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export default function FirstFlightOffer() {
             <h3 className="text-xl font-semibold text-orange-400 mb-2">How to avail the offer?</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-1">
               <li>Log in or sign up on Cleartrip</li>
-              <li>Select a domestic flight</li>
+              <li>Select a Hotel</li>
               <li>
                 Use code <span className="font-bold text-blue-700">CTFIRST</span> during checkout
               </li>
@@ -65,7 +65,7 @@ export default function FirstFlightOffer() {
           <h3 className="text-xl font-semibold text-gray-800 mb-2">Terms & Conditions</h3>
           <ul className="list-disc list-inside text-gray-600 space-y-1 text-sm">
             <li>Offer valid only for new users.</li>
-            <li>Applicable only on domestic flights booked on Cleartrip.</li>
+            
             <li>Maximum discount of ₹1,000.</li>
             <li>Offer valid till 31 May 2025.</li>
             <li>Standard cancellation policies apply.</li>

@@ -3,22 +3,22 @@ import { NavLink } from 'react-router-dom';
 
 const offers = [
   {
-    img: 'https://s.abcnews.com/images/GMA/airplane-vacation-gty-er-190402_hpMain_5_16x9_1600.jpg',
+    img: 'https://mmhotels.in/wp-content/uploads/2024/01/istockphoto-104731717-612x612-1.jpg',
   },
   {
-    img: 'https://www.flightnetwork.com/system/image/open_graph_default_image.jpg',
+    img: 'https://mmhotels.in/wp-content/uploads/2024/01/istockphoto-104731717-612x612-1.jpg',
   },
   {
-    img: 'https://blog.air.irctc.co.in/wp-content/uploads/2023/04/aeroplane-ticket-booking.jpg',
+    img: 'https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg',
   },
   {
-    img: 'https://assets.telegraphindia.com/telegraph/2020/Jul/1595972233_1594320268_shutterstock_699697081.jpg',
+    img: 'https://www.hotelscombined.in/rimg/himg/7f/61/7a/expediav2-601348-adb170-787981.jpg?width=968&height=607&crop=true',
   },
   {
-    img: 'https://i.ytimg.com/vi/UVOj672w4BI/hq720.jpg',
+    img: 'https://assets.cntraveller.in/photos/68106e3f9f2ded6f7061548c/1:1/w_750,h_750,c_limit/itc%20windsor.jpeg',
   },
   {
-    img: 'https://media.istockphoto.com/id/155439315/photo/passenger-airplane-flying-above-clouds-during-sunset.jpg?s=612x612&w=0&k=20&c=LJWadbs3B-jSGJBVy9s0f8gZMHi2NvWFXa3VJ2lFcL0=',
+    img: 'https://assets.cntraveller.in/photos/68106e3f9f2ded6f7061548c/1:1/w_750,h_750,c_limit/itc%20windsor.jpeg',
   },
 ];
 
@@ -36,7 +36,7 @@ export default function FlightCard() {
        <button className=' cursor-pointer bg-blue-600 text-white font-semibold px-4 py-1.5 rounded-full hover:bg-blue-700 transition m-5'>Flight</button>
        </NavLink>
       
-      <NavLink to="/booking/hotel/searchhotel">
+      <NavLink to="/booking/hotel">
       <button className= ' cursor-pointer bg-blue-600 text-white font-semibold px-4 py-1.5 rounded-full hover:bg-blue-700 transition m-5'>Hotel</button>
       </NavLink>
       <NavLink to="searchbus">
@@ -46,7 +46,7 @@ export default function FlightCard() {
         {/* Cards Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {offers.map((offer, index) => (
-            <NavLink to="/payment" key={index} className="group">
+            <NavLink to="/booking/hotel/paymenthotel" key={index} className="group">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transform transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                 {/* Image section */}
                 <div className="relative">
@@ -66,7 +66,7 @@ export default function FlightCard() {
                       className="w-5 inline-block mr-1"
                     /> */}
                     <span className="font-semibold">₹5,000 Off</span>
-                    <div className="text-xs text-gray-600">on Flights via UPI</div>
+                    <div className="text-xs text-black font-bold">on Hotels via UPI</div>
                   </div>
                 </div>
 

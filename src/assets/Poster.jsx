@@ -5,8 +5,7 @@ import firstbg from './image/first.png';
 import secondBg from "./image/second.png";
 import thirdBg from "./image/third.png";
 import fourthBg from "./image/fourth.png";
-import sbiLogo from "./image/third.png";
-import airIndiaLogo from "./image/fourth.png";
+
 
 const posters = [
   {

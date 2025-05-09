@@ -1,19 +1,23 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar"; // Make sure this path is correct
-import Banner from "./Banner";
-import Poster from "./Poster";
-import Popular from "./Popular";
-import Footer from "./Footer";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Banner from './Banner';
+import Poster from './Poster';
+import Popular from './Popular';
+import Footer from './Footer';
 
-export default function Layout() {
+const Layout = () => {
   return (
     <>
-      <Navbar />    
+      {/* Remove Navbar here if you're already using it globally in App.jsx */}
+      <div className="min-h-screen">
+        <Outlet /> {/* This is where nested routes will render */}
+      </div>
       <Banner />
-      <Poster />
-      <Popular />
-      <Outlet />     {/* Page-specific content */}
+                      <Poster />
+                      <Popular />
       <Footer />
     </>
   );
-}
+};
+
+export default Layout;
