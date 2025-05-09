@@ -82,12 +82,14 @@ const Navbar = () => {
       {isOpen && (
   <div className="absolute top-20 left-0 w-full bg-white shadow-md sm:hidden z-50">
     <div className="flex flex-col p-6 space-y-4">
+<NavLink to="/booking">
       <a
         href="#"
         className="text-gray-700 hover:text-orange-500 active:bg-orange-100 px-2 py-1 rounded transition text-base flex items-center"
       >
         ⭑ Offers
       </a>
+</NavLink>
       <a
         href="#"
         className="text-gray-700 hover:text-orange-500 active:bg-orange-100 px-2 py-1 rounded transition text-base flex items-center"
