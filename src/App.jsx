@@ -46,6 +46,7 @@ import Searchhotel from './assets/Searchhotel'
            
             <Route  path="/booking/hotel/paymenthotel" element={<Paymenthotel />} />
             <Route  path="/booking/hotel/searchhotel" element={<Searchhotel />} />
+            <Route  path="/booking/searchbus" element={<Searchbus />} />
             </Route>
           </Routes>
         </BrowserRouter>

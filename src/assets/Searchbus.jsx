@@ -1,98 +1,89 @@
-import React from 'react'
-import { FaPlaneDeparture, FaPlaneArrival, FaExchangeAlt, FaCalendarAlt,FaBus  } from 'react-icons/fa';
-const buttonicon = [
-  { icon: "🏨" },
-  { icon: "✈️" },
-  { icon: "🚗" },
-  { icon: "🚋" }
-]
+import React from "react";
 
-const Searchflight = () => {
-    
+
+const navOptions = [
+ { icon: "🏨", label:'Hotels' },
+  { icon: "✈️" , label:'Flight' },
+  { icon: "🚗" , label:'buses'},
+  { icon: "🚋" , label:'train'}
+];
+
+const offers = [
+  {
+    title: "Flat 10% off on SBI Cards",
+    subtitle: "Applicable on Credit Cards",
+    code: "SBICC",
+    image: "https://s1.rdbuz.com/bo-images/IND/WM/20437/26/FR/DS/webp/zE5KzH.webp",
+    logo: "https://i.pinimg.com/736x/2a/2c/1d/2a2c1d90075390b22e7e6060254dab0d.jpg",
+  },
+  {
+    title: "upto Rs.200 off",
+    subtitle: "on all bus bookings with Mobikwik wallet",
+    code: "CTMBK24",
+    image: "https://etimg.etb2bimg.com/photo/102775032.cms",
+    logo: "https://download.logo.wine/logo/MobiKwik/MobiKwik-Logo.wine.png",
+  },
+  {
+    title: "Flat 10% instant discount",
+    subtitle: "on bus bookings with federal bank credit and debit card",
+    code: "FEDCC / FEDDC",
+    image: "https://www.shutterstock.com/image-photo/trip-norway-blue-ice-tongue-600nw-1750963103.jpg",
+    logo: "https://www.federalbank.co.in/documents/10180/19811456/Federal+Bank+Logo.png/04e02062-995e-1a35-c09c-ca3d2153f7c2?t=1730984116284",
+  },
+  {
+    title: "Flat 10% instant discount",
+    subtitle: "on all bus bookings with AU bank",
+    code: "HDFC",
+    image: "https://www.sustainable-bus.com/wp-content/uploads/2024/07/Screenshot-2024-07-04-alle-10.41.38.png",
+    logo: "https://brandlogos.net/wp-content/uploads/2022/02/hdfc_bank-logo-brandlogos.net_.png",
+  },
+];
+
+function BusOffers() {
   return (
-    <>
-      <div>
-        <div className='bg-[#F3F5FA] flex justify-center items-center gap-10 h-15'>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[0].icon}</span> Flight
-          </h1>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[1].icon}</span> Hotel
-          </h1>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[2].icon}</span> Buses
-          </h1>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[3].icon}</span> Train
-          </h1>
-        </div>
-        <h1 className='m-5 text-4xl' >Seach Bus</h1>
-       <p className='text-1xl font-medium m-10'>Enjoy hassle free Bus tiket booking at lowest fair</p>
-
-       <div className="bg-white rounded-xl shadow-md p-6 max-w-4xl mx-auto space-y-4">
-      {/* Trip Type & Passenger Info */}
-      <div className="flex justify-between items-center border-b pb-4">
-        <div className="flex space-x-4 text-gray-700 font-medium">
-          <span className="cursor-pointer">→ One way</span>
-        </div>
-        <div className="cursor-pointer">👤 1 Adult, Economy ⌄</div>
-      </div>
-
-      {/* From/To Inputs */}
-      <div className="flex items-center gap-4">
-        <div className="flex items-center border rounded-lg px-3 py-2 w-full">
-          <FaBus className="text-gray-500 mr-2" />
-          <input type="text" placeholder="Where from?" className="w-full outline-none" />
-        </div>
-
-        <div className="text-gray-500">
-          <FaExchangeAlt />
-        </div>
-
-        <div className="flex items-center border rounded-lg px-3 py-2 w-full">
-          <FaBus className="text-gray-500 mr-2" />
-          <input type="text" placeholder="Where to?" className="w-full outline-none" />
-        </div>
-      </div>
-
-      {/* Dates */}
-      <div className="flex items-center gap-4">
-        <div className="flex items-center border rounded-lg px-3 py-2 w-full">
-          <FaCalendarAlt className="text-gray-500 mr-2" />
-          <input type="date" placeholder="Fri, May 9" className="w-full outline-none" />
-        </div>
-
-        <div className="flex items-center border rounded-lg px-3 py-2 w-full text-gray-400">
-            <input type="date" className="w-full outline-none" />
-          Return
-        </div>
-      </div>
-
-      {/* Fares */}
-      <div className="flex gap-2 flex-wrap">
-        <span className="border rounded-full px-3 py-1 text-sm cursor-pointer">Senior citizen fare</span>
-        <span className="border rounded-full px-3 py-1 text-sm cursor-pointer">Student fare</span>
-        <span className="border rounded-full px-3 py-1 text-sm cursor-pointer">Armed forces fare</span>
-      </div>
-
-      {/* Work Deal + Button */}
-      <div className="flex items-center justify-between mt-2">
-        <label className="flex items-center gap-2 cursor-pointer bg-blue-50 px-3 py-2 rounded-md text-sm">
-          <input type="checkbox" />
-          <div>
-            <span className="font-semibold">Unlock 10% extra savings</span> <span className="bg-orange-400 text-white px-1 py-0.5 rounded text-xs">NEW</span>
-            <div className="text-gray-500 text-xs">Cleartrip for Work</div>
+    <div className="bg-white">
+      {/* Top Icons Bar */}
+      <div className="w-full bg-[#F3F5FA] flex justify-center items-center gap-8 py-4">
+        {navOptions.map((item, index) => (
+          <div key={index} className="flex items-center gap-2 text-xl font-bold text-black">
+            {item.icon}
+            <span>{item.label}</span>
           </div>
-        </label>
+        ))}
+      </div>
 
-        <button className="bg-[#FF5B00] text-white font-semibold px-6 py-2 rounded-md hover:bg-orange-600 transition">
-          Search Buses
-        </button>
+      {/* Offers Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+        {offers.map((offer, index) => (
+          <div
+            key={index}
+            className="relative bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-all"
+          >
+            <img
+              src={offer.image}
+              alt={offer.title}
+              className="w-full h-40 object-cover"
+            />
+            <div className="absolute top-3 left-3">
+              <img src={offer.logo} alt="Logo" className="h-10 w-10 object-contain" />
+            </div>
+            <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/30 to-transparent text-white">
+              <h3 className="text-lg font-semibold">{offer.title}</h3>
+              <p className="text-sm mb-3">{offer.subtitle}</p>
+              <div className="flex items-center justify-between">
+                <div className="bg-white text-black px-2 py-1 rounded text-xs font-semibold">
+                  {offer.code}
+                </div>
+                <button className="text-sm font-semibold underline hover:text-orange-400">
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-      </div>
-    </>
-  )
+  );
 }
 
-export default Searchflight
+export default BusOffers;
