@@ -1,28 +1,38 @@
 import React from "react";
 
-// Replace these imports with correct paths or actual imports
-import firstbg from './image/first.png';
-import secondBg from "./image/second.png";
-import thirdBg from "./image/third.png";
-import fourthBg from "./image/fourth.png";
-
-
+// Poster Data with images in public folder
 const posters = [
   {
-    bg: firstbg,
-   
+    bg: "/image/first.png",
+    label: "New Arrival",
+    badge: "Hot Deal",
+    badgeSub: "Limited Time",
+    title: "Summer Beach Escape",
+    desc: "Enjoy the sun and sea at the best beaches.",
+    cta: "Book Now",
+    logo: "/image/logo1.png",
+    logoAlt: "Beach Logo",
   },
   {
-    bg: secondBg,
-   
+    bg: "/image/second.png",
+    title: "Explore Goa",
+    desc: "Discover the best resorts and beaches.",
+    cta: "Explore More",
   },
   {
-    bg: thirdBg,
-    
+    bg: "/image/third.png",
+    title: "Bangkok Adventures",
+    desc: "Explore the city of temples and markets.",
+    cta: "Book Now",
   },
   {
-    bg: fourthBg,
-   
+    bg: "/image/fourth.png",
+    label: "Exclusive Offer",
+    badge: "Special Discount",
+    badgeSub: "Book early and save",
+    title: "Jaipur Getaway",
+    desc: "Explore the beautiful palaces and forts.",
+    cta: "Learn More",
   },
 ];
 
@@ -36,7 +46,7 @@ export default function Poster() {
           style={{
             backgroundImage: `url(${poster.bg})`,
             backgroundSize: "cover",
-            // backgroundPosition: "center",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
         >

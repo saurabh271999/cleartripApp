@@ -1,31 +1,33 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { FaCircleArrowRight } from "react-icons/fa6";
+
 const popularSearches = [
   { icon: "🏨", label: "Hotels in Goa", detail: "7 - 8 May · 2 guests" },
   { icon: "✈️", label: "New Delhi → Mumbai", detail: "Next week · 1 traveller" },
   { icon: "🚌", label: "Bangalore → Goa", detail: "Next week · 1 traveller" },
   { icon: "🚆", label: "New Delhi → Bangkok", detail: "Next week · 1 traveller" },
-  
 ];
 
-
 export default function Banner() {
-  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+
   return (
     <section className="w-full px-4 py-16 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* Left Column */}
         <div className="flex-1">
-          {/* Header Row: Title on left, Cleartrip info on right */}
+          {/* Header Row */}
           <div className="flex justify-between items-center mb-8">
             <div>
               <h2 className="text-3xl font-bold">So, where to?</h2>
               <p className="text-gray-500 mt-1">Plan your trip with us</p>
             </div>
             <div className="text-right bg-blue-100 rounded-2xl p-5 mb-5">
-              <h2 className="text-3xl font-bold">Cleartrip for work </h2>
-              <p className="text-gray-500 mt-1">20% extra off for flight bookings <FaCircleArrowRight /></p>
+              <h2 className="text-3xl font-bold">Cleartrip for work</h2>
+              <p className="text-gray-500 mt-1">
+                20% extra off for flight bookings <FaCircleArrowRight />
+              </p>
             </div>
           </div>
 
@@ -34,28 +36,28 @@ export default function Banner() {
             <Card
               title="Flights"
               text="Get up to 25% off on domestic and international flights"
-              img="src/assets/image/flight.png"
+              img="/image/flight.png"
             />
             <Card
               title="Hotels"
               text="Up to 30% on 10L+ stays"
-              img="src/assets/image/hotel.png"
+              img="/image/hotel.png"
             />
             <Card
               title="Buses"
               text="Flat 12% off on first booking"
-              img="src/assets/image/bus.webp"
+              img="/image/bus.webp"
               imgHeight="h-24"
             />
             <Card
               title="Trains"
               text="New on Cleartrip"
-              img="src/assets/image/train.png"
+              img="/image/train.png"
             />
             <Card
               title="Packages"
               text="Thailand, Dubai, Kashmir and more starting 13999"
-              img="src/assets/image/rest.png"
+              img="/image/rest.png"
             />
           </div>
 
@@ -78,7 +80,7 @@ export default function Banner() {
           </div>
         </div>
 
-        {/* Right Column: Savings Card */}
+        {/* Right Column */}
         <div className="w-full md:w-80 flex-shrink-0">
           <div className="bg-blue-50 rounded-2xl p-5 flex flex-col gap-4 shadow-md hover:shadow-lg transition-all">
             <span className="font-semibold text-xl mb-2">Never miss a saving</span>
@@ -89,18 +91,21 @@ export default function Banner() {
               <Offer icon="🔒" text="Exclusive sign-in coupons" color="green" />
             </div>
 
-
-        
-      
-        
-       {
-        isAuthenticated ? (
-        <button className="ml-2 px-5 py-2 cursor-pointer border border-gray-400 rounded hover:bg-orange-500 text-base font-semibold" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log out</button>
-        ) : (
-          <button className="ml-2 px-5 py-2 cursor-pointer border border-gray-400 rounded hover:bg-orange-500 text-base font-semibold" onClick={() => loginWithRedirect()}>Log In</button>
-
-        )
-       }
+            {isAuthenticated ? (
+              <button
+                className="ml-2 px-5 py-2 cursor-pointer border border-gray-400 rounded hover:bg-orange-500 text-base font-semibold"
+                onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+              >
+                Log out
+              </button>
+            ) : (
+              <button
+                className="ml-2 px-5 py-2 cursor-pointer border border-gray-400 rounded hover:bg-orange-500 text-base font-semibold"
+                onClick={() => loginWithRedirect()}
+              >
+                Log In
+              </button>
+            )}
           </div>
         </div>
       </div>

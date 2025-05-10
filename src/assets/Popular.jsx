@@ -1,36 +1,30 @@
 import React from "react";
-import img1 from "../assets/image/beach.png"
-import img2 from './image/goa.png'
-import img3 from './image/bang.png'
-import img4 from './image/jaipur.png'
-import img5 from './image/patt.png'
-import img6 from './image/delhi.png'
-// Update these paths to match your actual public folder or assets
+
 const destinations = [
   {
-        name: "Goa",
-        properties: 3051,
-        image: img2,
+    name: "Goa",
+    properties: 3051,
+    image: "/image/goa.png",
   },
   {
     name: "Delhi",
     properties: 2436,
-    image: img3,
+    image: "/image/delhi.png",
   },
   {
     name: "Bangalore",
     properties: 2500,
-    image: img4,
+    image: "/image/bang.png",
   },
   {
     name: "Jaipur",
     properties: 920,
-    image: img5,
+    image: "/image/jaipur.png",
   },
   {
     name: "Pattaya",
     properties: 1850,
-    image: img6,
+    image: "/image/patt.png",
   },
 ];
 
@@ -41,7 +35,7 @@ export default function Popular() {
       <div
         className="w-full h-64 md:h-80 rounded-2xl overflow-hidden relative flex items-center"
         style={{
-          backgroundImage: `url(${img1})`, // ✅ Correct format for public image
+          backgroundImage: `url(/image/beach.png)`, // ✅ Use public path here
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -52,23 +46,20 @@ export default function Popular() {
         <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start pl-8 pr-4 w-full">
           {/* HSBC Logo & Text */}
           <div className="flex-1 flex flex-col justify-center">
-            {/* <div className="flex items-center mb-4">
-              <img src="/hsbc-logo.png" alt="HSBC" className="h-7 mr-2" />
-              <span className="text-white text-lg font-semibold">HSBC</span>
-            </div> */}
-            {/* <div className="text-white text-2xl md:text-3xl font-bold mb-2 leading-tight">
-              15%* off on domestic and <br className="hidden md:block" /> international holiday
-            </div> */}
-            {/* <div className="text-white text-base md:text-lg">
+            <div className="text-white text-2xl md:text-3xl font-bold mb-2 leading-tight">
+              15%* off on domestic and <br className="hidden md:block" /> international holidays
+            </div>
+            <div className="text-white text-base md:text-lg">
               HSBC TravelOne Credit Card
-            </div> */}
+            </div>
           </div>
+
           {/* Card Image */}
-          {/* <img
-            src="/hsbc-card.png"
+          <img
+            src="/image/hsbc-card.png"
             alt="HSBC Card"
             className="h-28 md:h-36 ml-0 md:ml-12 mt-6 md:mt-0"
-          /> */}
+          />
         </div>
       </div>
 
