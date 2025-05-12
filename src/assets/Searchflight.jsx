@@ -23,21 +23,22 @@ const Searchflight = () => {
   return (
     <>
       <div>
-        <div className='bg-[#F3F5FA] flex justify-center items-center gap-10 h-15'>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[0].icon}</span> Flight
-          </h1>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[1].icon}</span> Hotel
-          </h1>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[2].icon}</span> Buses
-          </h1>
-          <h1 className='text-black text-xl font-bold m-5'>
-            <span>{buttonicon[3].icon}</span> Train
-          </h1>
-        </div>
-
+       <div className="bg-[#F3F5FA] py-4 px-2">
+  <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+    <h1 className="text-black text-base md:text-lg lg:text-xl font-bold flex items-center gap-2">
+      <span>{buttonicon[0].icon}</span> Flight
+    </h1>
+    <h1 className="text-black text-base md:text-lg lg:text-xl font-bold flex items-center gap-2">
+      <span>{buttonicon[1].icon}</span> Hotel
+    </h1>
+    <h1 className="text-black text-base md:text-lg lg:text-xl font-bold flex items-center gap-2">
+      <span>{buttonicon[2].icon}</span> Buses
+    </h1>
+    <h1 className="text-black text-base md:text-lg lg:text-xl font-bold flex items-center gap-2">
+      <span>{buttonicon[3].icon}</span> Train
+    </h1>
+  </div>
+</div>
         <h1 className='m-5 text-4xl'>Search Flight</h1>
         <p className='text-1xl font-medium m-10'>Enjoy hassle free flight ticket booking at lowest airfare</p>
 
@@ -51,7 +52,7 @@ const Searchflight = () => {
           </div>
 
           {/* From/To Inputs */}
-          <div className="flex items-center gap-4">
+          <div className="flex  items-center gap-4">
             <div className="flex items-center border rounded-lg px-3 py-2 w-full">
               <FaPlaneDeparture className="text-gray-500 mr-2" />
               <input
