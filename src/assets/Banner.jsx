@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { FaCircleArrowRight } from "react-icons/fa6";
-import { ArrowRight } from 'lucide-react'
+import { NavLink } from "react-router-dom";
 import { createContext } from "react";
 const popularSearches = [
   { icon: "🏨", label: "Hotels in Goa", detail: "7 - 8 May · 2 guests" },
@@ -36,22 +36,28 @@ export default function Banner() {
 
           {/* Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-8">
-            <Card
+            <NavLink to="/payment/searchflight">
+              <Card
               title="Flights"
               text="Get up to 25% off on domestic and international flights"
               img="/image/flight.png"
             />
-            <Card
+            </NavLink>
+            <NavLink to='/booking/hotel/paymenthotel/searchflight/hotel'>
+             <Card
               title="Hotels"
               text="Up to 30% on 10L+ stays"
               img="/image/hotel.png"
             />
+            </NavLink>
+           <NavLink to="/booking/searchbus/paymentbus">
             <Card
               title="Buses"
               text="Flat 12% off on first booking"
               img="/image/bus.webp"
               imgHeight="h-24"
             />
+            </NavLink>
             <Card
               title="Trains"
               text="New on Cleartrip"

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 
 const navOptions = [
  { icon: "🏨", label:'Hotels' },
@@ -41,7 +41,9 @@ const offers = [
 
 function BusOffers() {
   return (
+  
     <div className="bg-white">
+      <NavLink to="/booking/searchbus/paymentbus">
       {/* Top Icons Bar */}
       <div className="w-full bg-[#F3F5FA] flex justify-center items-center gap-8 py-4">
         {navOptions.map((item, index) => (
@@ -80,8 +82,10 @@ function BusOffers() {
               </div>
             </div>
           </div>
+          
         ))}
       </div>
+      </NavLink>
     </div>
   );
 }

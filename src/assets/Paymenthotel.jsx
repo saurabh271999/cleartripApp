@@ -30,7 +30,7 @@ export default function FirstFlightOffer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <NavLink to="searchflight">
+            <NavLink to="/booking/hotel/paymenthotel/searchflight/hotel">
             <button className=" cursor-pointer bg-orange-600 hover:bg-orange-400 text-white px-6 py-2 rounded-full text-lg font-semibold shadow-md transition">
               Book Now
             </button>

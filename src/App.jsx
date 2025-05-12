@@ -12,10 +12,11 @@ import Layout from './assets/Layout';
 import Information from './assets/Information'
 import Searchflight from './assets/Searchflight';
 import Searchbus from './assets/Searchbus'
-
+import Hotel from './assets/Hotel'
 import Paymenthotel from './assets/Paymenthotel'
 import Searchhotel from './assets/Searchhotel'
 import Hover from './assets/Hover';
+import Paymentbus from './assets/Paymentbus';
 
 // import Loginpop from './assets/Loginpop'
 
@@ -52,6 +53,8 @@ import Hover from './assets/Hover';
             <Route  path="/booking/hotel/paymenthotel" element={<Paymenthotel />} />
             <Route  path="/booking/hotel/searchhotel" element={<Searchhotel />} />
             <Route  path="/booking/searchbus" element={<Searchbus />} />
+            <Route  path="/booking/searchbus/paymentbus" element={<Paymentbus />} />
+            <Route  path="/booking/hotel/paymenthotel/searchflight/hotel" element={<Hotel />} />
             </Route>
           </Routes>
         </BrowserRouter>
