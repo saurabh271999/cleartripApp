@@ -15,6 +15,7 @@ import Searchbus from './assets/Searchbus'
 
 import Paymenthotel from './assets/Paymenthotel'
 import Searchhotel from './assets/Searchhotel'
+import Hover from './assets/Hover';
 
 // import Loginpop from './assets/Loginpop'
 
@@ -22,6 +23,8 @@ import Searchhotel from './assets/Searchhotel'
 
     function App() {
       return (
+        <>
+        
         <BrowserRouter>
           <Navbar /> {/* Move this OUTSIDE Routes so it stays on all pages */}
     
@@ -29,7 +32,9 @@ import Searchhotel from './assets/Searchhotel'
             <Route path="/" element={
               <>
               {/* <Loginpop/> */}
+
                 <Banner />
+                <Hover />
                 <Poster />
                 <Popular />
                 <About />
@@ -50,6 +55,7 @@ import Searchhotel from './assets/Searchhotel'
             </Route>
           </Routes>
         </BrowserRouter>
+        </>
       );
     }
     

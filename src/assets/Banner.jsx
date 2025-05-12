@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { FaCircleArrowRight } from "react-icons/fa6";
-
+import { ArrowRight } from 'lucide-react'
+import { createContext } from "react";
 const popularSearches = [
   { icon: "🏨", label: "Hotels in Goa", detail: "7 - 8 May · 2 guests" },
   { icon: "✈️", label: "New Delhi → Mumbai", detail: "Next week · 1 traveller" },
   { icon: "🚌", label: "Bangalore → Goa", detail: "Next week · 1 traveller" },
   { icon: "🚆", label: "New Delhi → Bangkok", detail: "Next week · 1 traveller" },
 ];
-
+  export const contextprovider = createContext()
+ 
 export default function Banner() {
   const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
   return (
     <section className="w-full px-4 py-16 bg-white min-h-screen">
+       
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* Left Column */}
         <div className="flex-1">

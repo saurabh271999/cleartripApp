@@ -8,9 +8,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
 
+  
+
+
   return (
     <nav className="flex items-center justify-between px-4 py-4 bg-white shadow-sm">
       {/* Left: Logo and subtitle */}
+      
       <div className="flex items-center space-x-2">
       <NavLink to="/">
   <div className="flex items-center">
@@ -47,12 +51,12 @@ const Navbar = () => {
           <span className="mr-1 hover:text-orange-500">⭑Offers</span> 
               </NavLink>
       
-        <a href="#" className="flex items-center text-orange-900 hover:text-orange-500 text-base">
+        
           <span className="mr-1" hover>👜</span> Business
           <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M19 9l-7 7-7-7" />
           </svg>
-        </a>
+        
         <a href="#" className="flex items-center text-gray-700 hover:text-orange-500 text-base">
           <span className="mr-1">🧳</span> My Trips
         </a>
