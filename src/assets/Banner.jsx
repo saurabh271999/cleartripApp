@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import React from "react";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { createContext } from "react";
@@ -9,14 +8,11 @@ const popularSearches = [
   { icon: "🚌", label: "Bangalore → Goa", detail: "Next week · 1 traveller" },
   { icon: "🚆", label: "New Delhi → Bangkok", detail: "Next week · 1 traveller" },
 ];
-  export const contextprovider = createContext()
- 
-export default function Banner() {
-  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+export const contextprovider = createContext();
 
+export default function Banner() {
   return (
     <section className="w-full px-4 py-16 bg-white min-h-screen">
-       
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* Left Column */}
         <div className="flex-1">
@@ -38,25 +34,25 @@ export default function Banner() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-8">
             <NavLink to="/payment/searchflight">
               <Card
-              title="Flights"
-              text="Get up to 25% off on domestic and international flights"
-              img="/image/flight.png"
-            />
+                title="Flights"
+                text="Get up to 25% off on domestic and international flights"
+                img="/image/flight.png"
+              />
             </NavLink>
             <NavLink to='/booking/hotel/paymenthotel/searchflight/hotel'>
-             <Card
-              title="Hotels"
-              text="Up to 30% on 10L+ stays"
-              img="/image/hotel.png"
-            />
+              <Card
+                title="Hotels"
+                text="Up to 30% on 10L+ stays"
+                img="/image/hotel.png"
+              />
             </NavLink>
-           <NavLink to="/booking/searchbus/paymentbus">
-            <Card
-              title="Buses"
-              text="Flat 12% off on first booking"
-              img="/image/bus.webp"
-              imgHeight="h-24"
-            />
+            <NavLink to="/booking/searchbus/paymentbus">
+              <Card
+                title="Buses"
+                text="Flat 12% off on first booking"
+                img="/image/bus.webp"
+                imgHeight="h-24"
+              />
             </NavLink>
             <Card
               title="Trains"
@@ -99,22 +95,6 @@ export default function Banner() {
               <Offer icon="⭐" text="Up to 10% extra discount as Cleartrip loyalty benefit" color="yellow" />
               <Offer icon="🔒" text="Exclusive sign-in coupons" color="green" />
             </div>
-
-            {isAuthenticated ? (
-              <button
-                className="ml-2 px-5 py-2 cursor-pointer border border-gray-400 rounded hover:bg-orange-500 text-base font-semibold"
-                onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
-              >
-                Log out
-              </button>
-            ) : (
-              <button
-                className="ml-2 px-5 py-2 cursor-pointer border border-gray-400 rounded hover:bg-orange-500 text-base font-semibold"
-                onClick={() => loginWithRedirect()}
-              >
-                Log In
-              </button>
-            )}
           </div>
         </div>
       </div>

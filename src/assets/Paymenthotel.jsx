@@ -1,6 +1,42 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
+
 import { NavLink } from 'react-router-dom';
 export default function FirstFlightOffer() {
+  useEffect(() => {
+  const script = document.createElement('script');
+  script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+  script.async = true;
+  document.body.appendChild(script);
+}, []);
+
+  const handlePayment = () => {
+  const options = {
+    key: 'rzp_live_0UuvnA3YQefRKT', 
+    amount: buyPhone.price * counter * 100, 
+    currency: 'INR',
+    name: 'Buy Easy Phone',
+    description: buyPhone.title,
+    image: 'https://png.pngtree.com/png-clipart/20200727/original/pngtree-e-commerce-logo-template-png-image_5066821.jpg', 
+    handler: function (response) {
+      alert('✅ Payment Successful! Payment ID: ' + response.razorpay_payment_id);
+    },
+    prefill: {
+      name: 'Saurabh',
+      email: 'saurabh@example.com',
+      contact: '9999999999',
+    },
+    notes: {
+      address: 'Ghaziabad, India',
+    },
+    theme: {
+      color: '#3399cc',
+    },
+  };
+
+  const rzp = new window.Razorpay(options);
+  rzp.open();
+};
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col items-center py-10 px-4">
       {/* Hero Section */}
@@ -31,7 +67,7 @@ export default function FirstFlightOffer() {
             rel="noopener noreferrer"
           >
             <NavLink to="/booking/hotel/paymenthotel/searchflight/hotel">
-            <button className=" cursor-pointer bg-orange-600 hover:bg-orange-400 text-white px-6 py-2 rounded-full text-lg font-semibold shadow-md transition">
+            <button onClick={handlePayment} className=" cursor-pointer bg-orange-600 hover:bg-orange-400 text-white px-6 py-2 rounded-full text-lg font-semibold shadow-md transition">
               Book Now
             </button>
             </NavLink>

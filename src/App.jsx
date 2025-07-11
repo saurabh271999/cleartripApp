@@ -6,34 +6,34 @@ import Poster from './assets/Poster';
 import Popular from './assets/Popular';
 import Footer from './assets/Footer';
 import About from './assets/About';
-import Payment from './assets/Payment'
+import Payment from './assets/Payment';
 import Booking from './assets/Booking';
 import Layout from './assets/Layout';
-import Information from './assets/Information'
+import Information from './assets/Information';
 import Searchflight from './assets/Searchflight';
-import Searchbus from './assets/Searchbus'
-import Hotel from './assets/Hotel'
-import Paymenthotel from './assets/Paymenthotel'
-import Searchhotel from './assets/Searchhotel'
+import Searchbus from './assets/Searchbus';
+import Hotel from './assets/Hotel';
+import Paymenthotel from './assets/Paymenthotel';
+import Searchhotel from './assets/Searchhotel';
 import Hover from './assets/Hover';
 import Paymentbus from './assets/Paymentbus';
+import LoginPopup from './assets/LoginPopup'; // ✅ this is our popup
+import ProfilePage from './profile/ProfilePage'; // Import ProfilePage
 
-// import Loginpop from './assets/Loginpop'
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        {/* ✅ Popup appears globally once */}
+        <LoginPopup />
 
+        <Navbar />
 
-
-    function App() {
-      return (
-        <>
-        
-        <BrowserRouter>
-          <Navbar /> {/* Move this OUTSIDE Routes so it stays on all pages */}
-    
-          <Routes>
-            <Route path="/" element={
+        <Routes>
+          <Route
+            path="/"
+            element={
               <>
-              {/* <Loginpop/> */}
-
                 <Banner />
                 <Hover />
                 <Poster />
@@ -42,26 +42,29 @@ import Paymentbus from './assets/Paymentbus';
                 <Information />
                 <Footer />
               </>
-            } />
-            <Route element={<Layout/>}>
+            }
+          />
+
+          <Route element={<Layout />}>
             <Route path="/booking" element={<Booking />} />
             <Route path="/payment" element={<Payment />} />
-    
-            <Route  path="/payment/searchflight" element={<Searchflight />} />
-            <Route  path="/payment/searchflight" element={<Searchflight />} />
-           
-            <Route  path="/booking/hotel/paymenthotel" element={<Paymenthotel />} />
-            <Route  path="/booking/hotel/searchhotel" element={<Searchhotel />} />
-            <Route  path="/booking/searchbus" element={<Searchbus />} />
-            <Route  path="/booking/searchbus/paymentbus" element={<Paymentbus />} />
-            <Route  path="/booking/hotel/paymenthotel/searchflight/hotel" element={<Hotel />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-        </>
-      );
-    }
-    
-  
+            <Route path="/payment/searchflight" element={<Searchflight />} />
+            <Route path="/booking/hotel/paymenthotel" element={<Paymenthotel />} />
+            <Route path="/booking/hotel/searchhotel" element={<Searchhotel />} />
+            <Route path="/booking/searchbus" element={<Searchbus />} />
+            <Route path="/booking/searchbus/paymentbus" element={<Paymentbus />} />
+            <Route
+              path="/booking/hotel/paymenthotel/searchflight/hotel"
+              element={<Hotel />}
+            />
+          </Route>
+
+          {/* Add Profile Page Route */}
+          <Route path="/profile" element={<ProfilePage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
 
 export default App;
